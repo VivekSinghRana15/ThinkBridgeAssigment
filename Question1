@@ -1,0 +1,109 @@
+Test Cases:
+
+TC001 - Validation of Page Structure
+Verify that the page(developed for the component) consists of two components:
+1- To add a new item
+2- To Display & remove old items
+
+
+TC002 - Validation of Components alignment
+Verify that both Components(Adding Item & List of items) should be horizontally & vertically aligned
+Verify that the Adding item is on top & the list of old items is below it
+
+
+TC003 - Validating Component 1- To add new Item
+Verify that the Component 1 consists of the following fields
+1 - "Name" & a text box to enter the value of Name
+2 - "Description" & a text box to enter detailed description 
+3 - "Price" & a text field to enter value in expected currency (*to check if the currency for ex Rupee/Pound/Dollar) is to be displayed)
+4 - "Upload Image" button
+5 - A Button (lets call it Create) to finally upload the new item into DB (*This has to be checked with Product owner as the requirement is not clear about this)
+
+TC004 - Validating Component 1's Name field
+Verify that user is able to enter Name in the text box provided successfully
+Verify that the user is able to use Alphanumeric & special characters(*Not mentioned in requirements but normally this is allowed- to be clarified with product owner)
+Verify that leaving this field blank & clicking the Create button throws an error for filling this field
+
+
+TC005 - Validating Component 1's Decription field
+Verify that user is able to enter Decription in the text box provided successfully
+Verify that the user is able to use Alphanumeric & special characters(*Not mentioned in requirements but normally this is allowed- to be clarified with product owner)
+Verify that leaving this field blank & clicking the Create button throws an error for filling this field
+
+
+TC006 - Validating Component 1's Price field
+Verify that user is able to enter Price in the text box provided successfully
+Verify that the user is able to use Numeric characters only (*have to check whether decimal point should be allowed or not)
+Verify that leaving this field blank & clicking the Create button throws an error for filling this field
+
+
+TC007 - Validating Component 1's Create Button(To be clarified with Product Owner yet)
+Verify that the Button is clickable
+Verify that once we click on this button a message pops up that shows that shos that the item has been successfully added
+Verify that once the item is added it appears in the list of items on the same page(in component2-to check if it will appear on top, bottom or somewhere in middle depending on name etc)
+
+
+TC008 - Validating an item with maximum values get added correctly to DB
+Create entry with maximum number of allowed values & combination of fields 
+After clicking Create button- verify that the item is created in the DB with exactly those details
+Also check if it is visible in Component 2 with those details- also click on the item to check that in next page that opens for this item, the detals here(additionally description) are all as expectation
+
+
+TC009 - Validating an item with minimum values get added correctly to DB
+Create entry with minimum number of allowed values in the fields 
+After clicking Create button- verify that the item is created in the DB with exactly those details
+Also check if it is visible in Component 2 with those details- also click on the item to check that in next page that opens for this item, the detals here(additionally description) are all as expectation
+
+
+TC010 - Validating Component 2 - List of items
+Verify that the Component 2 is consisting of following :
+1 - Tabular entries of items(*To check the order with product owner)
+2 - Each entry should consist of Name of the item, Price of the item, an image(thumbnail) of the item & a Remove button in a serial order(in a row)
+3 - The page should show desired number of items, and the remaining items should be visible if we click on the Next Page on the bottom(*requirement not mentioned- but to be checked/suggested to the product owner)
+
+
+TC011 - Validating the items are correctly appearing
+Verify that the Names, price & image are correctly appearing on the row
+Also verify that when we click on any item, then the next page consists of the details of the same item only
+
+
+TC012 - Validating the New Page for items clicked
+Verify that the New Page that opens up after clicking any item from component 2 list contains correct details
+Verify that the Description for item is also present along with Name, Price & Image
+
+
+TC013 - Validating Remove button
+Verify that if we click on remove button it gives a pop-up to confirm deletion with option to Confirm or cancel(* to be checked with product owner)
+Verify that if we click cancel, we are brought back to first page
+
+
+TC014 - Validating removal of item
+Click on Remove button for any item
+On the pop-up(*if agreed with product owner), click on Confirm
+Verify that we get a message that item has been removed/deleted
+Also verify that it gets removed from DB & does not appear on tthe screen as well
+
+
+TC015 - Validate the removal of first item on the page
+Verify if we ca successfully remove the first item in the list
+
+
+TC016 - Validate the removal of last item on the page
+Verify if we ca successfully remove the last item in the list 
+
+
+Scenarios that we can Automate are:
+
+ATC001 - Addition of item:
+Steps:
+Add Name, Price, description, upload image 
+click Add/Create button
+verify that the Item with same Name, Price & Image appears on the Component2 list. Also check if remove button appears for the same
+Click on newly created item & verify that same Name, Description, Price & Image appears on the new page
+
+
+ATC002 - Removal of item:
+Steps:
+Click on remove button for any item
+Click on Confirm on the pop up that opens up
+Verify that the item is removed from the list
