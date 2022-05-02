@@ -1,0 +1,24 @@
+Feedback/improvements/suggestions as a Functional Quality Engineer and as an End User:
+
+Items needed for better testing:
+Nearly Reference Consumer number( as this is mandatory field & I don't know any id)
+
+
+Functional Issues:
+** Critical - If we make "Total load" in connection details blank  & click outside, the application crashes & throws error "Error in ex.Try after sometime"
+1. The link on top "Application to be submitted only after installation / Wiring is completed in all respects." is not working
+2. The links for Images are broken in the "Applicant Details" section
+3. The Help link opens a blank page
+4. Middle name of landlord is mandatory- this cannot be mandatory
+5. Critical - If we make "Total load" in connection details blank  & click outside, the application crashes & throws error "Error in ex.Try after sometime"
+6. In the "Category of Premise", if we select "Others", the we should get a field to enter what other type it is.
+7. If I am clicking gGenerate OTP, it does not send out OTP & ignores that I am missing "Nearly Reference Consumer number"- or it is not sending the OTP due to that, but is not informing me by any way like a pop-up etc
+
+Usability Issues:
+1. As soon as we click on a field to enter details- for example FirstName- it gives a message "Press the 1Password icon....."- this is very confusing- as we can still enter name
+2. if someone enters less than 10 digits for his mobile number it throws error- but deletes the whole number- would be better to ask the user to check and leave what he has wrigtten there
+3. The "Upload required documents" section can be made better by providing a text like Photograph then choose File button & then an upload button
+
+Aesthetical issues:
+1. The Colour scheme used is horrible- Especialy the one used in the section"Whether power supply address is same as billing address"
+2. "Upload Required Document's" is grammatically incorrect- should be simply "Upload Required Documents". No apostophe
